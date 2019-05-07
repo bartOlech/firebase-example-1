@@ -1,0 +1,68 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+header h1 {
+    text-align: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title {
+    color: #fff;
+    font-family: monospace;
+    padding-top: 20px;
+}
+.box-list-of-name {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 130px;
+    border: 1px solid grey;
+    border-radius:12px;
+    background: rgb(231, 231, 231);
+    /* margin-top: 50px; */
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -ms-border-radius:12px;
+    -o-border-radius:12px;
+    display: flex;
+    justify-content: center;
+}
+.list-of-name-tittle {
+    text-align: center;
+    font-family: monospace;
+}
+.list-of-name {
+    list-style-type: none;
+    margin-left: -110px;
+    margin-top: 50px;
+}
+.list-of-name li{
+    padding-top: 25px;
+    font-family: monospace;
+    font-size: 1.2em;
+    display: flex;
+}
+.user-img {
+    width: 25px;
+    height: 25px;
+    background: url('./img/user.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+.user-list-name {
+    padding-right: 5px;
+}
