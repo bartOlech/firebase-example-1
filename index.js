@@ -28,16 +28,22 @@ const getUserFromDb = (doc) => {
     cross.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id')
-        e.target.parentElement.style.display = 'none'
+        // e.target.parentElement.style.display = 'none'
         db.collection('users').doc(id).delete();
     })
 }
 
-// getting data
-db.collection('users').get().then((snapshot) => {
+// // getting data
+// db.collection('users').get().then((snapshot) => {
+//     snapshot.docs.forEach(doc => {
+//         getUserFromDb(doc)
+//     });
+// })
+
+// getting particular data (name === bart)
+db.collection('users').where('Name', '==', 'bart').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
-        console.log(doc.data().Name)
-        getUserFromDb(doc)
+        console.log(doc.data())
     });
 })
 
@@ -50,4 +56,17 @@ form.addEventListener('submit', (e) => {
     })
     form.name.value = '';
     form.surname.value = '';
+})
+
+// getting live-data
+db.collection('users').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+        if(change.type === 'added') {
+            getUserFromDb(change.doc)
+        }else if (change.type === 'removed') {
+            let li= list.querySelector(`[data-id=${change.doc.id}]`)
+            list.removeChild(li)
+        }
+    })
 })
