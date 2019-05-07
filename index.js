@@ -6,19 +6,31 @@ const getUserFromDb = (doc) => {
     let userImg = document.createElement('div');
     let name = document.createElement('span');
     let surname = document.createElement('span');
+    let cross = document.createElement('div')
 
     // append class to the element
     userImg.classList.add('user-img')
     name.classList.add('user-list-name')
+    cross.classList.add('user-list-cross')
 
     li.setAttribute('data-id', doc.id);
     name.textContent = `${doc.data().Name} `;
     surname.textContent = doc.data().Surname;
+    cross.textContent = 'x';
 
     li.appendChild(userImg);
     li.appendChild(name);
     li.appendChild(surname);
+    li.appendChild(cross);
     list.appendChild(li)
+
+    // deleting data
+    cross.addEventListener('click', (e) => {
+        e.stopPropagation();
+        let id = e.target.parentElement.getAttribute('data-id')
+        e.target.parentElement.style.display = 'none'
+        db.collection('users').doc(id).delete();
+    })
 }
 
 // getting data
