@@ -66,3 +66,46 @@ header h1 {
 .user-list-name {
     padding-right: 5px;
 }
+
+/* form styles */
+.add-user-form {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+}
+.add-user-form-input {
+    width: 130px;
+    height: 25px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 34px;
+}
+.add-user-form-btn {
+    width: 130px; 
+    height: 28px;
+    background: #fff;
+    font-family: monospace;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 34px;
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* align the placeholder */
+::-webkit-input-placeholder {
+    text-align: center;
+ }
