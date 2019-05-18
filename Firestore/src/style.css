@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+header h1 {
+    text-align: center;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title {
+    color: #fff;
+    font-family: monospace;
+    padding-top: 20px;
+}
+.box-list-of-name {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 130px;
+    border: 1px solid grey;
+    border-radius:12px;
+    background: rgb(231, 231, 231);
+    /* margin-top: 50px; */
+    -webkit-border-radius:12px;
+    -moz-border-radius:12px;
+    -ms-border-radius:12px;
+    -o-border-radius:12px;
+    display: flex;
+    justify-content: center;
+}
+.list-of-name-tittle {
+    text-align: center;
+    font-family: monospace;
+}
+.list-of-name {
+    list-style-type: none;
+    margin-left: -110px;
+    margin-top: 50px;
+}
+.list-of-name li{
+    padding-top: 25px;
+    font-family: monospace;
+    font-size: 1.2em;
+    display: flex;
+}
+.user-img {
+    width: 25px;
+    height: 25px;
+    background: url('./img/user.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+.user-list-name {
+    padding-right: 5px;
+}
+.user-list-cross {
+    position: absolute;
+    right: 30px;
+    margin-top: -3px;
+    font-weight: 800;
+    font-family: monospace;
+    color: rgb(172, 13, 13);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* form styles */
+.add-user-form {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    justify-content: center;
+}
+.add-user-form-input {
+    width: 130px;
+    height: 25px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 34px;
+}
+.add-user-form-btn {
+    width: 130px; 
+    height: 28px;
+    background: #fff;
+    font-family: monospace;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 34px;
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* align the placeholder */
+::-webkit-input-placeholder {
+    text-align: center;
+ }
