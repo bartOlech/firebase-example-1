@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+import LogIn from './js/LogIn';
 
 const list = document.querySelector('#list-of-name');
 const form = document.querySelector('#add-user-form');
@@ -35,13 +36,6 @@ const getUserFromDb = (doc) => {
     })
 }
 
-// // getting data
-// db.collection('users').get().then((snapshot) => {
-//     snapshot.docs.forEach(doc => {
-//         getUserFromDb(doc)
-//     });
-// })
-
 // getting particular data (name === bart)
 db.collection('users').where('Name', '==', 'bart').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
@@ -72,3 +66,6 @@ db.collection('users').onSnapshot(snapshot => {
         }
     })
 })
+
+// login section
+LogIn()

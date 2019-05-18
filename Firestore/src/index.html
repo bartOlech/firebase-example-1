@@ -13,6 +13,7 @@
 <body> 
     <header>
         <h1 class='main-title'>Hello...</h1>
+        <button id='log-in-btn' class='log-in-btn'>Sign in</button>
     </header>
     <div class="main-content">
         <div class="box-list-of-name">
@@ -27,6 +28,29 @@
         <input class='add-user-form-input' type="text" name='surname' placeholder="surname">
         <button class='add-user-form-btn'>send</button>
     </form>
+    <!-- log in -->
+    <div>
+        <form class='sign-in-form'>
+            <h3 class='sign-in-form-tittle'>Sign in</h3>
+            <div class='sign-in-social-btn'>
+                <button class='social-btn fb-btn'>
+                    <span class='social-ico social-ico-fb'></span>
+                    Facebook
+                </button>
+                <button class='social-btn google-btn'>
+                        <span class='social-ico social-ico-google'></span>
+                    Google
+                </button>
+            </div>
+            
+            <label for='sign-in-username-text'>Username</label>
+            <input id='sign-in-username-text' type="text">
+
+            <label  for='sign-in-password-text'>Password</label>
+            <input id='sign-in-password-text' type="passworw">
+            <button class='sign-in-send-btn'>Sign in</button>
+        </form>
+    </div>
     <script>
             // Your web app's Firebase configuration
             var firebaseConfig = {
