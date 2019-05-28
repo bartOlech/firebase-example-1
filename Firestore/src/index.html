@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
     <link rel="stylesheet" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
+   
     <title>Firebase-test</title>
 </head>
 <body> 
     <header>
         <h1 class='main-title'>Hello...</h1>
-        <button id='log-in-btn' class='log-in-btn'>Sign in</button>
+        <button id='sign-out-btn' class='sign-up-btn'>Sign out</button>
+        <button id='sign-in-btn' class='sign-in-btn'>Sign in</button>
+        <button id='sign-up-btn' class='sign-up-btn'>Sign up</button>
     </header>
     <div class="main-content">
         <div class="box-list-of-name">
@@ -29,8 +30,10 @@
         <button class='add-user-form-btn'>send</button>
     </form>
     <!-- log in -->
-    <div>
+    <div id='sign-in-container' class='sign-in-container'>
+        
         <form class='sign-in-form'>
+            <div id='close-form-sign-in-btn' class='close-form-btn'>X</div>
             <h3 class='sign-in-form-tittle'>Sign in</h3>
             <div class='sign-in-social-btn'>
                 <button class='social-btn fb-btn'>
@@ -51,21 +54,53 @@
             <button class='sign-in-send-btn'>Sign in</button>
         </form>
     </div>
+     <!-- register -->
+     <div id='sign-up-container' class='sign-up-container'>
+        <form id='sign-up-form' class='sign-in-form'>
+            <div id='close-form-sign-up-btn' class='close-form-btn'>X</div>
+            <h3 class='sign-in-form-tittle'>Sign up</h3>
+            <div class='sign-in-social-btn'>
+                <button class='social-btn fb-btn'>
+                    <span class='social-ico social-ico-fb'></span>
+                    Facebook
+                </button>
+                <button class='social-btn google-btn'>
+                        <span class='social-ico social-ico-google'></span>
+                    Google
+                </button>
+            </div>
+            <label for='sign-up-email-text'>Email</label>
+            <input id='sign-up-email-text' type="text">
+
+            <label  for='sign-up-password-text'>Password</label>
+            <input id='sign-up-password-text' type="password">
+
+            <label  for='sign-up-password-text2'>Repeat password</label>
+            <input id='sign-up-password-text2' type="password">
+            <button id='sign-up-send-btn' class='sign-in-send-btn'>Sign up</button>
+        </form>
+        
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-auth.js"></script>
     <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-              apiKey: "AIzaSyD864VHR2HsdEuS2qsku7FgY8-ffNyJ9jQ",
-              authDomain: "test-project-b26a5.firebaseapp.com",
-              databaseURL: "https://test-project-b26a5.firebaseio.com",
-              projectId: "test-project-b26a5",
-              storageBucket: "test-project-b26a5.appspot.com",
-              messagingSenderId: "283952683214",
-              appId: "1:283952683214:web:3258ef1ed831e971"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            const db = firebase.firestore();
-          </script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD864VHR2HsdEuS2qsku7FgY8-ffNyJ9jQ",
+          authDomain: "test-project-b26a5.firebaseapp.com",
+          databaseURL: "https://test-project-b26a5.firebaseio.com",
+          projectId: "test-project-b26a5",
+          storageBucket: "test-project-b26a5.appspot.com",
+          messagingSenderId: "283952683214",
+          appId: "1:283952683214:web:8120aae673cb33a6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const auth = firebase.auth();
+
+      </script>
           <script src='index.js'></script>
 </body>
 </html>

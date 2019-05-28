@@ -1,5 +1,8 @@
 import './style.css';
 import LogIn from './js/LogIn';
+import Register from './js/Register';
+import Auth from './js/Auth';
+import CloseForm from './js/CloseForm'
 
 const list = document.querySelector('#list-of-name');
 const form = document.querySelector('#add-user-form');
@@ -68,4 +71,7 @@ db.collection('users').onSnapshot(snapshot => {
 })
 
 // login section
-LogIn()
+LogIn();
+Register();
+Auth();
+CloseForm();
