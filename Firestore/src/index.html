@@ -12,6 +12,7 @@
 <body> 
     <header>
         <h1 class='main-title'>Hello...</h1>
+        <h2 class='test-from-db' id='test-from-db'></h2>
         <button id='sign-out-btn' class='sign-up-btn'>Sign out</button>
         <button id='sign-in-btn' class='sign-in-btn'>Sign in</button>
         <button id='sign-up-btn' class='sign-up-btn'>Sign up</button>
@@ -31,8 +32,7 @@
     </form>
     <!-- log in -->
     <div id='sign-in-container' class='sign-in-container'>
-        
-        <form class='sign-in-form'>
+        <form id='sign-in-form' class='sign-in-form'>
             <div id='close-form-sign-in-btn' class='close-form-btn'>X</div>
             <h3 class='sign-in-form-tittle'>Sign in</h3>
             <div class='sign-in-social-btn'>
@@ -46,12 +46,12 @@
                 </button>
             </div>
             
-            <label for='sign-in-username-text'>Username</label>
+            <label for='sign-in-username-text'>Email</label>
             <input id='sign-in-username-text' type="text">
 
             <label  for='sign-in-password-text'>Password</label>
-            <input id='sign-in-password-text' type="passworw">
-            <button class='sign-in-send-btn'>Sign in</button>
+            <input id='sign-in-password-text' type="password">
+            <button id='sign-in-send-btn' class='sign-in-send-btn'>Sign in</button>
         </form>
     </div>
      <!-- register -->
@@ -77,6 +77,9 @@
 
             <label  for='sign-up-password-text2'>Repeat password</label>
             <input id='sign-up-password-text2' type="password">
+
+            <label  for='form-age'>Age</label>
+            <input id='form-age' type="number">
             <button id='sign-up-send-btn' class='sign-in-send-btn'>Sign up</button>
         </form>
         

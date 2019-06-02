@@ -156,7 +156,7 @@ header h1 {
  .sign-in-form {
      position: absolute;
      width: 500px;
-     height: 500px;
+     height: 550px;
      background-image: linear-gradient(to top, #e7f0fd 0%, #accbee 100%);
      top:50%;
      left:50%;
@@ -232,7 +232,7 @@ header h1 {
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 25px;
+    margin-top: 5px;
     outline:  none;
     cursor: pointer;
 }
@@ -255,7 +255,7 @@ header h1 {
 .sign-in-container {
     display: none;
 }
-.sign-up-container {
+.sign-up-form {
     display: inline;
 }
 /* close form button */
@@ -268,4 +268,13 @@ header h1 {
     right: 20px;
     top: 10px;
     cursor: pointer;
+}
+
+/* text from db */
+.test-from-db {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
